@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 style="text-align: center; padding-bottom: 25px;">All transactions</h1>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Commission</th>
+            <th>Currency</th>
+            <th>Is paid</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="transaction in transactions">
+            <td>{{$index +1}}</td>
+            <td>{{transaction.type}}</td>
+            <td>{{transaction.price}}</td>
+            <td>{{transaction.commission}}</td>
+            <td>{{transaction.currency}}</td>
+            <td>{{transaction.paid}}</td>
+        </tr>
+        </tbody>
+        <div style="text-align: center; font-size: 25px; color:red;" ng-show="emptyList">No records</div>
+    </table>
+</div>

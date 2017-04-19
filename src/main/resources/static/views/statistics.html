@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 style="text-align: center; padding-bottom: 25px;">Statistics</h1>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Currency</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Commission</th>
+            <th>ToChargeValue</th>
+            <th>SettlementValue</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="transaction in statistics">
+            <td>{{$index +1}}</td>
+            <td>{{transaction.currency}}</td>
+            <td>{{transaction.type}}</td>
+            <td>{{transaction.price}}</td>
+            <td>{{transaction.commission}}</td>
+            <td>{{transaction.toChargeValue}}</td>
+            <td>{{transaction.settlementValue}}</td>
+        </tr>
+        </tbody>
+        <div style="text-align: center; font-size: 25px; color:red;" ng-show="emptyList">No records</div>
+    </table>
+</div>
